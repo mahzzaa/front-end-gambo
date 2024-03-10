@@ -1,0 +1,105 @@
+/* navbar logo font style */
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+nav .logo {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xxx-large;
+}
+
+nav .hamburger {
+  margin-right: 50px;
+}
+
+nav .hamburger:hover {
+  cursor: pointer;
+}
+
+nav svg {
+  width: 40px;
+  height: 40px;
+}
+
+nav svg:hover path {
+  fill: gray;
+}
+
+.sidebar {
+  position: absolute;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: #fff;
+  height: 100%;
+  width: 30%;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  border-left: 1px solid #000;
+}
+
+.sidebar svg {
+  width: 30px;
+  position: absolute;
+  right: 0;
+  margin: 15px;
+}
+
+.sidebar svg:hover {
+  cursor: pointer;
+}
+
+.sidebar svg:hover path {
+  fill: gray;
+}
+
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.sidebar .links a {
+  color: #000;
+  text-decoration: none;
+  padding: 30px 10px;
+  font-size: large;
+  border-bottom: 1px solid transparent;
+}
+
+.sidebar .links a:hover {
+  border-bottom: 1px solid #000;
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebar {
+    width: 70%;
+  }
+}
