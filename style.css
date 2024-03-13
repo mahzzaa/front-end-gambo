@@ -6,11 +6,6 @@
   padding: 0;
 }
 
-body {
-  justify-content: center;
-  align-items: center;
-}
-
 :root {
   --gray: #464646;
 }
@@ -18,13 +13,14 @@ body {
 /* navbar */
 nav {
   width: 100%;
-  position: absolute;
+  position: fix;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
   top: 0;
+  z-index: 2;
 }
 
 nav a {
@@ -45,7 +41,9 @@ nav .logo {
 }
 
 nav .hamburger {
-  margin-right: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 nav .hamburger:hover {
@@ -121,6 +119,8 @@ nav svg:hover path {
   align-items: center;
   height: auto;
   padding-top: 100px;
+  width: 100%;
+  background: red;
 }
 .header {
   display: grid;
@@ -181,22 +181,61 @@ nav svg:hover path {
   transition: 600ms ease;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 468px) {
   /* navbar */
   .sidebar {
-    width: 70%;
+    width: 60%;
   }
 
   /* header */
 
   .first {
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
   }
+
   .header {
-    grid-template-columns: auto;
-    row-gap: 40px;
-    width: auto;
-    margin: 10px;
-    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left-info {
+    padding: 0 20px;
+  }
+
+  .header img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* header */
+
+  .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left-info {
+    padding: 0 30px;
   }
 }
